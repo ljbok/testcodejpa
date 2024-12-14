@@ -8,7 +8,7 @@ public class RequestTodoDto {
     LocalDateTime date;
     boolean isFinish;
 
-    protected RequestTodoDto(String title) {
+    public RequestTodoDto() {
     }
 
     public RequestTodoDto(long id, String title, LocalDateTime date, boolean isFinish) {
@@ -30,7 +30,7 @@ public class RequestTodoDto {
         return date;
     }
 
-    public boolean isFinish() {
+    public boolean getIsFinish() {
         return isFinish;
     }
 }

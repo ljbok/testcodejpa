@@ -10,10 +10,6 @@ import java.util.Optional;
 
 @Repository
 public interface TodoRepository extends JpaRepository<Todo,Long> {
-
-    // id로 todo 찾기
-    Optional<Todo> findById(Long id);
-    
     // id로 todo 삭제
     void deleteById(Long id);
 }

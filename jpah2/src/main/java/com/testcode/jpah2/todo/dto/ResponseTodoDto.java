@@ -1,5 +1,7 @@
 package com.testcode.jpah2.todo.dto;
 
+import com.testcode.jpah2.todo.domain.Todo;
+
 import java.time.LocalDateTime;
 
 public class ResponseTodoDto {
@@ -8,7 +10,7 @@ public class ResponseTodoDto {
     LocalDateTime date;
     boolean isFinish;
 
-    protected ResponseTodoDto() {
+    public ResponseTodoDto() {
     }
 
     public ResponseTodoDto(long id, String title, LocalDateTime date, boolean isFinish) {
@@ -30,7 +32,12 @@ public class ResponseTodoDto {
         return date;
     }
 
-    public boolean isFinish() {
-        return isFinish;
+    public boolean getIsFinish() { return isFinish; }
+
+    public ResponseTodoDto(Todo todo) {
+        this.id = todo.getId();
+        this.title = todo.getTitle();
+        this.date = todo.getDate();
+        this.isFinish = todo.getIsFinish();
     }
 }
